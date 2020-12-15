@@ -1,38 +1,5 @@
 import numpy as np
 import datetime
-import random
-
-
-# def rref(matrix):
-#     # get number of rows 'n' and columns 'm' of the matrix
-#     m, n = matrix.shape
-#
-#     # determines if any rows are all zero and puts them at the bottom of the matrix
-#     for i in range(m):
-#         print(matrix[i, :], matrix[i, :] == 0, '\n', matrix)
-#         if False not in (matrix[i, :] == 0):
-#             print(i)
-#             matrix[[m - 1, i]] = matrix[[i, m - 1]]
-#             m -= 1
-#
-#     print(matrix)
-#
-#     # j = 0
-#     # for row in range(m):
-#     #     if j >= n:
-#     #         return matrix
-#     #
-#     #     i = row
-#     #     while matrix[i, j] == 0:
-#     #         i += 1
-#     #         if i == m:
-#     #             i = row
-#     #             j += 1
-#     #             if j == n:
-#     #                 return matrix
-#
-#     return matrix
-
 
 def det(matrix):
     m, n = matrix.shape
@@ -64,6 +31,8 @@ if __name__ == '__main__':
 
     start_time = datetime.datetime.now()
     print(det(big_matrix))
+
+    # print the runtime
     print(datetime.datetime.now() - start_time)
 
 
