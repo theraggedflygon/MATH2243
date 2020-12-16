@@ -11,6 +11,11 @@ def rref(matrix):
     while i < m and j < n:
         # find the pivot and its index
         pivot = max(abs(matrix[i:m, j]))
+
+        if pivot == 0:
+            j += 1
+            continue
+
         p_idx = abs(A[i:m, j]).tolist().index(pivot)
         p_idx += i
 
